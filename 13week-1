@@ -1,0 +1,13 @@
+def mean(numbers):
+    return sum(numbers) / len(numbers)
+
+data = [2, 4, 4, 4, 5, 5, 7, 9]
+print(mean(data))   # 5.0
+
+def std(numbers):
+    m = sum(numbers) / len(numbers)
+    variance = sum((x - m) ** 2 for x in numbers) / len(numbers) #제곱한 거 더해서 길이 나눔
+    return variance ** 0.5 #제곱근 계산
+
+data = [4, 2, 7, 9, 3, 6, 9, 12, 3, 6]
+print(std(data))  # 3.047
