@@ -1,0 +1,31 @@
+# def mean(numbers):
+#     return sum(numbers) / len(numbers)
+
+# data = [2, 4, 4, 4, 5, 5, 7, 9]
+# print(mean(data))   # 5.0
+
+# def std(numbers):
+#     m = sum(numbers) / len(numbers)
+#     variance = sum((x - m) ** 2 for x in numbers) / len(numbers) #제곱한 거 더해서 길이 나눔
+#     return variance ** 0.5 #제곱근 계산
+
+# data = [4, 2, 7, 9, 3, 6, 9, 12, 3, 6]
+# print(std(data))  # 3.047
+
+
+# import matplotlib.pyplot as plt
+
+# months = ["1월", "2월", "3월", "4월"]
+# sales = [120, 135, 98, 160]
+
+# plt.hist(months, sales) #가로 세로 막대 그래프 그리기
+# plt.show() #pip install 적어줘야 함 
+
+# plt.hint(months, sales) #선 그래프 그리기
+
+
+plt.bar(months, sales)
+plt.title("월별 매출")
+plt.xlabel("월")
+plt.ylabel("매출(만원)")
+plt.savefig("sales_bar.png")
